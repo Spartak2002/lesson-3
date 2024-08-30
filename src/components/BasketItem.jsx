@@ -35,7 +35,7 @@
 //     </>
 // }
 
-export const BasketItem = ({ cart,countPlus,countMinus,deleteFromBasket}) => {
+export const BasketItem = ({ cart, countPlus, countMinus, deleteFromBasket }) => {
     return <>
         <table className="table table-dark table-bordered">
             <thead>
@@ -53,11 +53,11 @@ export const BasketItem = ({ cart,countPlus,countMinus,deleteFromBasket}) => {
                         <td>{elm.name}</td>
                         <td>{elm.price}</td>
                         <td>{elm.count}</td>
-                        <td>{elm.count*elm.price} USD</td>
+                        <td>{elm.count * elm.price} USD</td>
                         <td>
-                            <button onClick={()=>countPlus(elm.id)} className="btn btn-success">+</button>
-                            <button onClick={()=>countMinus(elm.id)} className="btn btn-warning" >-</button>
-                            <button onClick={()=>deleteFromBasket(elm.id)}  className="btn btn-danger">&times;</button>
+                            <button onClick={() => countPlus(elm.id)} className="btn btn-success">+</button>
+                            <button onClick={() => countMinus(elm.id)} className="btn btn-warning" >-</button>
+                            <button onClick={() => deleteFromBasket(elm.id)} className="btn btn-danger">&times;</button>
                         </td>
                     </tr>)
                 }

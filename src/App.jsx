@@ -17,6 +17,10 @@ export default function App() {
 
   const [basket, setBasket] = useState([])
 
+  const [total, setTotal] = useState(0)
+
+
+
   const moveToCart = prod => {
     let found = basket.find(product => product.id == prod.id)
     if (found) {
@@ -42,7 +46,7 @@ export default function App() {
     if (found.count > 1) {
       found.count--
       setBasket([...tmp])
-    } 
+    }
   }
 
 
@@ -68,7 +72,8 @@ export default function App() {
         countPlus={countPlus}
         countMinus={countMinus}
         deleteFromBasket={deleteFromBasket}
-
+        total={total}
+        setTotal={setTotal}
 
       />
 
